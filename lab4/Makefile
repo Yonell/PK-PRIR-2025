@@ -6,6 +6,8 @@ all: example circle broadcast procedure
 
 run_all: run_example run_circle run_broadcast run_procedure
 
+# ------------------------------------------------------------------------------
+
 example.o: example.cpp
 	$(LOAD_MODULES) mpicxx -c example.cpp -o example.o
 
