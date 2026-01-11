@@ -34,7 +34,7 @@ clean_circle:
 	rm -f circle.o circle
 
 run_circle: circle
-	$(LOAD_MODULES) mpirun -np 4 ./circle
+	$(LOAD_MODULES) mpirun -np 5 ./circle
 
 .PHONY: clean_circle run_circle
 
@@ -50,7 +50,7 @@ clean_broadcast:
 	rm -f broadcast.o broadcast
 
 run_broadcast: broadcast
-	$(LOAD_MODULES) mpirun -np 4 ./broadcast
+	$(LOAD_MODULES) mpirun -np 5 ./broadcast
 
 .PHONY: clean_broadcast run_broadcast
 
@@ -66,7 +66,7 @@ clean_procedure:
 	rm -f procedure.o procedure
 
 run_procedure: procedure
-	$(LOAD_MODULES) mpirun --oversubscribe -np 16 ./procedure
+	$(LOAD_MODULES) mpirun --oversubscribe -np 6 ./procedure
 
 .PHONY: clean_procedure run_procedure
 
